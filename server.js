@@ -65,3 +65,32 @@ app.post('/api/notes', (req, res) => {
         });
     });
 });
+
+// Deletes the note object with requested id
+app.delete('/api/notes/:id', function (req, res) {
+    // Reading the db file for existing notes
+    fs.readFile(path.join(__dirname, './db/db.json'), 'utf8', (err, response) => {
+        if (err) {
+            console.log(err);
+        }
+
+        // Declaring variables for notes
+        let notes = JSON.parse(response);
+
+        // Deleting note based on ID
+        res.json(notes.splice(req.params.id, 1));
+        // Updating db file with new changes (deleted note)
+        fs.writeFile(path.join(__dirname, './db/db.json'), JSON.stringify(notes, null, 2), (error) => {
+            if (error) {
+                console.log(error);
+                throw error;
+            } else {
+                console.log('Note deleted successfully.');
+            }
+        });
+    });
+});
+
+app.listen(port, () =>
+    console.log(`App currently listening on port ${port} 🚀`)
+);
