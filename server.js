@@ -18,3 +18,18 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static('public'));
 
+
+// Route for getting user to notes page
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
+// Route that displays info from db.json (note API data)
+app.get('/api/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './db/db.json'));
+});
+
+// Route for getting user to index page
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
