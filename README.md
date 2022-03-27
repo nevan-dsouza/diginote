@@ -6,9 +6,9 @@
 
 This is an application that allows a user to create, edit, and remove notes. It has a back-end server where all of their notes are stored in a database. This ensures that the notes are kept unless the user explicitly requests that they be erased. 
 
-> Github Repository Link: [https://github.com/Bnevan-dsouza/diginote](https://github.com/nevan-dsouza/diginote)
+> Github Repository Link: [https://github.com/nevan-dsouza/diginote](https://github.com/nevan-dsouza/diginote)
 >
-> Deployed Link: 
+> Deployed Link: [https://digi-note.herokuapp.com/](https://digi-note.herokuapp.com/)
 
 
 ## Table of Contents
