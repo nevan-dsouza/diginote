@@ -32,9 +32,9 @@ In order to run this program on your local machine, the user must type "node ser
 
 ### Screenshots of the Application
 
-![Screenshot of the note-taking app, with a couple notes already written](./images/note-it-01.png)
+![Screenshot of the note-taking app, with a note already written](./images/notes-default.png)
 
-![Screenshot of the note-taking app, with a couple notes already written](./images/note-it-02.png)
+![Screenshot of the note-taking app](./images/note-post.png)
 
 ## License
 
